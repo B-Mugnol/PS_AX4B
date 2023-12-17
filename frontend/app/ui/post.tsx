@@ -1,7 +1,7 @@
 import axios from 'axios'
 import styles from './post.module.css'
-import { PostData, PostComponentProperty, CommentData } from '@/app/lib/definitions'
-import { Comment } from '@/app/ui/comment'
+import { PostData, PostComponentProperty, CommentData } from '../lib/definitions'
+import { Comment } from './comment'
 
 export async function Post({ postId }: PostComponentProperty) {
 	try {
