@@ -20,7 +20,7 @@ export function Post({ postId }: PostComponentProperty) {
 	}, [postId])
 
 
-	if (isLoading) return <p>Loading, please wait...</p>
+	if (isLoading) return <p className={styles.loading}>Loading, please wait...</p>
 	if (!post) return <p>We ran into some issues. Please wait a few moments before reloading.</p>
 
 	return (
