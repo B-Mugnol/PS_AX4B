@@ -5,7 +5,7 @@ import { Comment } from '@/app/ui/comment'
 
 export async function Post({ postId }: PostComponentProperty) {
 	try {
-		const { data } = await axios.get(`http://localhost:3003/post/${postId}`)
+		const { data } = await axios.get(`${process.env.URL || "http://localhost:3003"}/post/${postId}`)
 		const post: PostData = data.post
 		const comments: CommentData[] = data.comments
 
@@ -21,6 +21,10 @@ export async function Post({ postId }: PostComponentProperty) {
 			</div>
 		)
 	} catch (error) {
-		return
+		return (
+			<div>
+				{postId == 1 ? "We ran into some issues. Please wait a few moments before reloading." : ""}
+			</div>
+		)
 	}
 }
