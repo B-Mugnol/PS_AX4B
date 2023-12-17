@@ -1,0 +1,31 @@
+.post {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	align-items: center;
+	margin: 1%;
+	margin-top: 4%;
+	border-style: solid;
+	border-width: 1px;
+	border-radius: 1%;
+	padding: 3%;
+}
+
+.title {
+	font-size: x-large;
+	text-align: center;
+	font-weight: bolder;
+	margin-bottom: 1%;
+}
+
+.content {
+	font-size: large;
+	font-style: italic;
+	text-align: justify;
+}
+
+.comments {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
