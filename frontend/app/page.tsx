@@ -21,8 +21,31 @@ export default function Home() {
 		<div className={styles.core}>
 			{
 				currentPostId == 1 ?
-					<></>:
-					<button  className={styles.changePostButton} onClick={previousPost}>Previous post</button>
+					<button
+						className={styles.changePostButton}
+					>
+						<Image
+							src="/arrow-left.svg"
+							alt="Arrow Left"
+							width={50}
+							height={50}
+							priority
+							hidden
+						>
+						</Image>
+					</button> :
+					<button
+						className={styles.changePostButton}
+						onClick={previousPost}>
+						<Image
+							src="/arrow-left.svg"
+							alt="Arrow Left"
+							width={50}
+							height={50}
+							priority
+						>
+						</Image>
+					</button>
 			}
 			<main className={styles.main}>
 				<div className={styles.description}>
@@ -52,7 +75,19 @@ export default function Home() {
 				<Post postId={currentPostId} />
 
 			</main>
-			<button className={styles.changePostButton} onClick={nextPost}>Next post</button>
+			<button
+				className={styles.changePostButton}
+				onClick={nextPost}>
+				<Image
+					id={styles.mirroredImage}
+					src="/arrow-left.svg"
+					alt="Arrow Right"
+					width={50}
+					height={50}
+					priority
+				>
+				</Image>
+			</button>
 		</div>
 	)
 }
