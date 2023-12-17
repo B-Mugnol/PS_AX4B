@@ -10,7 +10,6 @@ export function Post({ postId }: PostComponentProperty) {
 	const [isLoading, setLoading] = useState(true)
 
 	useEffect(() => {
-		console.log("currentPostId: " + postId)
 		setLoading(true)
 		axios.get(`${process.env.URL || "http://localhost:3003"}/post/${postId}`)
 			.then(({ data }) => {
