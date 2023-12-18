@@ -1,7 +1,6 @@
 import express from 'express'
 import cors from 'cors'
 import { AddressInfo } from 'net'
-// import { postRouter, errorRouter } from './src/router'
 import postRouter from './routes/post'
 import errorRouter from './routes/error'
 
