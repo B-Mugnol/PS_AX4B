@@ -1,10 +1,12 @@
 import express from 'express'
+import cors from 'cors'
 import { AddressInfo } from 'net'
 import { postRouter, errorRouter } from './router'
 
 // Setup
 const app = express()
 app.use(express.json())
+app.use(cors())
 
 // Router
 app.use("/post", postRouter)
