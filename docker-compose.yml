@@ -1,0 +1,19 @@
+version: '1'
+
+services:
+    front:
+        build:
+            context: ./frontend
+        container_name: front
+        restart: on-failure
+        ports:
+            - "3000:3000"
+        depends_on:
+            - back
+    back:
+        build:
+            context: ./backend
+        container_name: back
+        restart: on-failure
+        ports:
+            - "3003:3003"
