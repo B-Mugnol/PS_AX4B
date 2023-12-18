@@ -1,7 +1,9 @@
 import express from 'express'
 import cors from 'cors'
 import { AddressInfo } from 'net'
-import { postRouter, errorRouter } from './router'
+// import { postRouter, errorRouter } from './src/router'
+import postRouter from './routes/post'
+import errorRouter from './routes/error'
 
 // Setup
 const app = express()

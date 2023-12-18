@@ -2,10 +2,10 @@
   "name": "ps_ax4b",
   "version": "1.0.0",
   "description": "",
-  "main": "./build/index.js",
+  "main": "./build/server.js",
   "scripts": {
-    "start": "tsc && node ./build/index.js",
-    "dev": "nodemon src/index.ts",
+    "start": "tsc && node ./build/server.js",
+    "dev": "nodemon src/server.ts",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "B-Mugnol",
